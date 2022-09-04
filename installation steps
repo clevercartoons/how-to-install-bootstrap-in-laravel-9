@@ -1,0 +1,99 @@
+1- create laravel project
+    - composer create-project laravel/laravel --prefer-dist l9-bootstrap
+    or
+    - laravel new l9-bootstrap
+
+    Get inside l9-bootstrap.
+
+    cd l9-bootstrap
+  
+2-Install Laravel/UI
+    Laravel UI is an official library that offers selective or predefined UI components. 
+    The laravel/ui package comes with the login and registration scaffolding for 
+    React, Vue, jQuery, and Bootstrap layouts.
+
+    Run the command to install Laravel/UI.
+    
+     composer require laravel/ui
+
+3- Install Bootstrap in Laravel
+    We have successfully installed a laravel/ui package using Composer, now in this step, 
+    we will understand how to easily install the Bootstrap lastest CSS Framework using the following command.
+
+    Run command to install Bootstrap in Laravel project
+
+    php artisan ui bootstrap
+
+4- Install Bootstrap Auth Scaffolding
+    Execute the following command to Install the auth scaffoldings with Bootstrap
+    
+    php artisan ui bootstrap --auth
+
+    We have successfully installed the bootstrap, and you can make sure by going to resource/js/bootstrap.js. 
+    You will see that popper.js and jQuery have been added to the bootstrap’s JavaScript file.
+    
+5- Install Bootstrap Packages
+    Before you install Bootstrap Package, you need to check have installed Node js or not.
+    - Run this command in command prompt to check
+      # for node
+      node -v
+      # for npm
+      npm -v
+    - Install the bootstrap package
+      npm install
+ 6- Compile Assets
+    As we can see, resources/sass folder _variables.scss and app.scss files have added along 
+    with sass variables and fonts.
+  
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    // Variables
+    @import 'variables';
+    // Bootstrap
+    @import '~bootstrap/scss/bootstrap';
+ 
+ Now, we have to run the below command for asset compilation.
+ 
+    # for development
+    npm run dev
+
+    # for production
+    npm run production
+ 
+    The above command compiles CSS and JavaScript files from resources/js and resources/sass folder to the public folder.
+
+
+    - Automate SASS and JS Changes
+
+    If you are lazy and don’t want to run the npm run dev command every time you make changes in SASS and JS file,
+    you should use the following command.
+
+       npm run watch
+
+
+    It keeps an eye on your files and compiles the code automatically if detects any change made in SASS and JS files.
+
+
+ 
+ 7- Using Bootstrap in Laravel Blade Template
+
+Now, sass files are complied to single CSS file inside the public folder, and we can define the js and 
+CSS path and use the Bootstrap js and CSS in the Laravel blade template.
+ </head> 
+      <script src="{{ asset('js/app.js') }}" defer></script>
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+ </head>
+ <body>
+ <div class="card">
+        <div class="card-body">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+ </body>
