@@ -1,4 +1,4 @@
-1- create laravel project
+[x]1- create laravel project
     - composer create-project laravel/laravel --prefer-dist l9-bootstrap
     or
     - laravel new l9-bootstrap
@@ -7,7 +7,7 @@
 
     cd l9-bootstrap
   
-2-Install Laravel/UI
+[x]2-Install Laravel/UI
     Laravel UI is an official library that offers selective or predefined UI components. 
     The laravel/ui package comes with the login and registration scaffolding for 
     React, Vue, jQuery, and Bootstrap layouts.
@@ -16,7 +16,7 @@
     
      composer require laravel/ui
 
-3- Install Bootstrap in Laravel
+[]3- Install Bootstrap in Laravel
     We have successfully installed a laravel/ui package using Composer, now in this step, 
     we will understand how to easily install the Bootstrap lastest CSS Framework using the following command.
 
@@ -24,7 +24,7 @@
 
     php artisan ui bootstrap
 
-4- Install Bootstrap Auth Scaffolding
+[]4- Install Bootstrap Auth Scaffolding
     Execute the following command to Install the auth scaffoldings with Bootstrap
     
     php artisan ui bootstrap --auth
@@ -32,7 +32,7 @@
     We have successfully installed the bootstrap, and you can make sure by going to resource/js/bootstrap.js. 
     You will see that popper.js and jQuery have been added to the bootstrap’s JavaScript file.
     
-5- Install Bootstrap Packages
+[]5- Install Bootstrap Packages
     Before you install Bootstrap Package, you need to check have installed Node js or not.
     - Run this command in command prompt to check
       # for node
@@ -41,7 +41,7 @@
       npm -v
     - Install the bootstrap package
       npm install
- 6- Compile Assets
+ []6- Compile Assets
     As we can see, resources/sass folder _variables.scss and app.scss files have added along 
     with sass variables and fonts.
   
@@ -74,7 +74,7 @@
 
 
  
- 7- Using Bootstrap in Laravel Blade Template
+ []7- Using Bootstrap in Laravel Blade Template
 
 Now, sass files are complied to single CSS file inside the public folder, and we can define the js and 
 CSS path and use the Bootstrap js and CSS in the Laravel blade template.
